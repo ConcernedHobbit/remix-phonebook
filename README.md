@@ -12,11 +12,11 @@ Install necessary packages: `npm install`
 
 *PostgreSQL*: Update `DATABASE_URL` in `.env` to a postgres URL and run `npm run init:postgresql`
 
-*Optional* Populate the database with user `root:password` and some example contacts: `node --require esbuild-register prisma/seed.ts`
-
 Set `SESSION_SECRET` in `.env` to a random, secure value.
 
 Start the development server: `npm run dev`
+
+The database has been seeded with the user `root:password` and a couple of contacts for `root`. Have fun!
 
 ## Resources
 
