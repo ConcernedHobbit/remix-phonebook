@@ -14,7 +14,8 @@
     "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css",
     "postinstall": "remix setup node",
     "start": "remix-serve build",
-    "init": "prisma db push && prisma generate"
+    "init": "prisma generate",
+    "init:postgresql": "prisma generate --schema ./prisma/postgresql.prisma"
   },
   "dependencies": {
     "@prisma/client": "^3.8.1",
