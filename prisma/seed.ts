@@ -23,6 +23,10 @@ seed();
 function getContacts() {
   return [
     {
+      name: "Emergency Services",
+      phone: "0118 999 88199 9119 725 3",
+    },
+    {
       name: "Ed Ruin",
       phone: "+358 12 345 6789",
     },

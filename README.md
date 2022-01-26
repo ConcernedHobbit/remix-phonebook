@@ -4,13 +4,17 @@ A simple web app where you can definitely 100% safely store all of your sensitiv
 
 Made in one night to learn the basics of Remix and what it's capable of.
 
-## Installation
+## Installation & running
 
-`npm install`
+Install necessary packages: `npm install`
 
-`npm run init`
+Initialize prisma database: `npm run init`
 
-*Optional* `node --require esbuild-register prisma/seed.ts` will populate the database with user `root:password` and a couple of contacts.
+*Optional* Populate the database with user `root:password` and some example contacts: `node --require esbuild-register prisma/seed.ts`
+
+Set `SESSION_SECRET` in `.env` to a random, secure value.
+
+Start the development server: `npm run dev`
 
 ## Resources
 
