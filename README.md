@@ -8,7 +8,9 @@ Made in one night to learn the basics of Remix and what it's capable of.
 
 Install necessary packages: `npm install`
 
-Initialize prisma database: `npm run init`
+*SQLite*: Initialize prisma database: `npm run init`
+
+*PostgreSQL*: Update `DATABASE_URL` in `.env` to a postgres URL and run `npm run init:postgresql`
 
 *Optional* Populate the database with user `root:password` and some example contacts: `node --require esbuild-register prisma/seed.ts`
 

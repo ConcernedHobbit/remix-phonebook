@@ -4,6 +4,7 @@
   "description": "Phonebook application for learning remix",
   "license": "",
   "prisma": {
+    "schema": "prisma/postgresql.prisma",
     "seed": "node --require esbuild-register prisma/seed.ts"
   },
   "scripts": {
@@ -14,8 +15,8 @@
     "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css",
     "postinstall": "remix setup node",
     "start": "remix-serve build",
-    "init": "prisma generate",
-    "init:postgresql": "prisma generate --schema ./prisma/postgresql.prisma"
+    "init": "prisma generate --schema ./prisma/schema.prisma",
+    "init:postgresql": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^3.8.1",
