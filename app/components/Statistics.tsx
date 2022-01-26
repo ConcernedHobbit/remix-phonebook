@@ -8,6 +8,7 @@ const Statistics: React.FC<JSX.IntrinsicElements["div"]> = ({ ...props }) => {
 
   useEffect(() => {
     fetcher.load("/statistics");
+    // Mainly to not have it show up with JavaScript disabled
     setSpinner(true);
   }, []);
 
@@ -16,7 +17,7 @@ const Statistics: React.FC<JSX.IntrinsicElements["div"]> = ({ ...props }) => {
       <div {...props}>
         <p className="font-semibold">Your statistics</p>
         {fetcher.data.loggedIn ? (
-          <p>{fetcher.data.contacts} contacts</p>
+          <p>{fetcher.data.contacts} {fetcher.data.contacts === 1 ? "contact" : "contacts"}</p>
         ) : (
           <em>Please log in.</em>
         )}
