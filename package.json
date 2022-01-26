@@ -1,0 +1,53 @@
+{
+  "private": true,
+  "name": "remix-phonebook",
+  "description": "Phonebook application for learning remix",
+  "license": "",
+  "prisma": {
+    "seed": "node --require esbuild-register prisma/seed.ts"
+  },
+  "scripts": {
+    "build": "npm run build:css && remix build",
+    "build:css": "tailwindcss -m -i ./styles/app.css -o app/styles/app.css",
+    "dev": "concurrently \"npm run dev:css\" \"npm run dev:run\"",
+    "dev:run": "node -r dotenv/config ./node_modules/.bin/remix dev",
+    "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css",
+    "postinstall": "remix setup node",
+    "start": "remix-serve build",
+    "init": "prisma db push && prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.8.1",
+    "@remix-run/react": "^1.1.3",
+    "@remix-run/serve": "^1.1.3",
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.1",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^14.3.0",
+    "esbuild-register": "^3.3.2",
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "remix": "^1.1.3",
+    "tailwindcss-aria-attributes": "^1.3.0"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^1.1.3",
+    "@tailwindcss/forms": "^0.4.0",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "autoprefixer": "^10.4.2",
+    "concurrently": "^7.0.0",
+    "postcss": "^8.4.5",
+    "prisma": "^3.8.1",
+    "tailwindcss": "^3.0.16",
+    "typescript": "^4.1.2"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "sideEffects": false
+}

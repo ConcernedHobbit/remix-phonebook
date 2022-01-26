@@ -1,0 +1,9 @@
+# Build files
+build
+public/build
+
+# TailwindCSS generated file
+app/styles/app.css
+
+node_modules
+.cache
