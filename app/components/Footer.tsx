@@ -3,7 +3,7 @@ const Footer: React.FC<JSX.IntrinsicElements["footer"]> = ({
   ...props
 }) => {
   return (
-    <footer className="fixed bottom-2 right-4" {...props}>
+    <footer className="float-right mr-4 mb-2" {...props}>
       {children}
       <p className="text-gray-300">
         made with <span className="font-mono">&lt;3</span>,{" "}

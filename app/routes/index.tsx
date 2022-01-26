@@ -43,7 +43,7 @@ export default function Index() {
       </Header>
 
       <Main>
-        <div className="max-w-xl break-words">
+        <div className="max-w-prose break-words">
           <h2 className="font-semibold">Welcome to Phonebook!</h2>
           <p>
             Phonebook is a project I created in one night to help learn{" "}
